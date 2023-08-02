@@ -1,0 +1,273 @@
+
+
+
+
+
+// ***************************  RENDERING BY FILTER BUTTON  **************************
+
+// Size Checkboxes
+const sizeM = document.getElementById("m");
+const sizeS = document.getElementById("s");
+const sizeL = document.getElementById("l");
+const sizeXL = document.getElementById("xl");
+
+// Price Checkboxes
+const _0to25 = document.getElementById("0-25");
+const _25to50 = document.getElementById("25-50");
+const _50to100 = document.getElementById("50-100");
+const _100on = document.getElementById("100on");
+
+// Colors Checkboxes
+
+const red = document.getElementById("#ff0000");
+const blue = document.getElementById("#6495ED");
+const green = document.getElementById("#98fb98");
+const black = document.getElementById("#000000");
+const orange = document.getElementById("#ed7b09");
+
+// Filter Button
+const applyBtn = document.getElementById("apply-filter");
+
+// Array of Added Filters
+let filterArray = {
+  color: [],
+  price: [],
+  size: [],
+};
+
+applyBtn.addEventListener("click", (event) => {
+  //   filterArray.sort();
+  console.log(filterArray);
+  let toBeRendered = [];
+
+  
+  for (let i = 0; i < totalArray.length; i++) {
+    let item = totalArray[i];
+    console.log(item);
+
+    // To check color availability
+    function checkColor(){
+      for (let j = 0; j < 3; j++) {
+        flag = false;
+        for (let k = 0; k < 3; k++) {
+          if(item.randomColor[j] == filterArray.color[k])
+          flag = true;
+          break;
+        }
+        if(flag){
+          return true;
+        }
+      } 
+      return false; 
+    }
+
+    // To check size availability
+    function checkSize(){
+      for (let j = 0; j < 3; j++) {
+        flag = false;
+        for (let k = 0; k < 3; k++) {
+          if(item.randomSize[j] == filterArray.size[k])
+          flag = true;
+          break;
+        }
+        if(flag){
+          return true;
+        }
+      }
+      return false;
+    }
+     if(checkColor() && checkSize()){
+      toBeRendered.push(item);
+    }
+  };
+  
+  console.log(toBeRendered);
+
+});
+
+
+// Color filters
+red.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.color.push(this.id);
+  } else {
+    let id = this.id;
+    filterArray.color = filterArray.color.filter((v, i) => {
+      if (filterArray.color[i] !== id) {
+        return filterArray.color[i];
+      }
+    });
+  }
+});
+
+blue.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.color.push(this.id);
+  } else {
+    let id = this.id;
+    filterArray.color = filterArray.color.filter((v, i) => {
+      if (filterArray.color[i] !== id) {
+        return filterArray.color[i];
+      }
+    });
+  }
+});
+
+green.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.color.push(this.id);
+  } else {
+    let id = this.id;
+    filterArray.color = filterArray.color.filter((v, i) => {
+      if (filterArray.color[i] !== id) {
+        return filterArray.color[i];
+      }
+    });
+  }
+});
+
+black.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.color.push(this.id);
+  } else {
+    let id = this.id;
+    filterArray.color = filterArray.color.filter((v, i) => {
+      if (filterArray.color[i] !== id) {
+        return filterArray.color[i];
+      }
+    });
+  }
+});
+
+orange.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.color.push(this.id);
+  } else {
+    let id = this.id;
+    filterArray.color = filterArray.color.filter((v, i) => {
+      if (filterArray.color[i] !== id) {
+        return filterArray.color[i];
+      }
+    });
+  }
+});
+
+// Price filters
+_0to25.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.price.push(Number(this.value));
+  } else {
+    let value = this.value;
+    filterArray.price = filterArray.price.filter((v, i) => {
+      if (Number(filterArray.price[i]) !== Number(value)) {
+        return filterArray.price[i];
+      }
+    });
+  }
+});
+
+_25to50.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.price.push(Number(this.value));
+  } else {
+    let value = this.value;
+    filterArray.price = filterArray.price.filter((v, i) => {
+      if (Number(filterArray.price[i]) !== Number(value)) {
+        return filterArray.price[i];
+      }
+    });
+  }
+});
+
+_50to100.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.price.push(Number(this.value));
+  } else {
+    let value = this.value;
+    console.log(value)
+    filterArray.price = filterArray.price.filter((v, i) => {
+      if (Number(filterArray.price[i]) !== Number(value)) {
+        return filterArray.price[i];
+      }
+    });
+  }
+});
+
+_100on.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.price.push(Number(this.value));
+  } else {
+    let value = this.value;
+    filterArray.price = filterArray.price.filter((v, i) => {
+      if (Number(filterArray.price[i]) !== Number(value)) {
+        return filterArray.price[i];
+      }
+    });
+  }
+});
+
+// Size Filters
+sizeS.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.size.push(this.id.toUpperCase());
+  } else {
+    let id = this.id.toUpperCase();
+    filterArray.size = filterArray.size.filter((v, i) => {
+      if (filterArray.size[i] !== id) {
+        return filterArray.size[i];
+      }
+    });
+  }
+});
+
+sizeM.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.size.push(this.id.toUpperCase());
+  } else {
+    let id = this.id.toUpperCase();
+    filterArray.size = filterArray.size.filter((v, i) => {
+      if (filterArray.size[i] !== id) {
+        return filterArray.size[i];
+      }
+    });
+  }
+});
+
+sizeL.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.size.push(this.id.toUpperCase());
+  } else {
+    let id = this.id.toUpperCase();
+    filterArray.size = filterArray.size.filter((v, i) => {
+      if (filterArray.size[i] !== id) {
+        return filterArray.size[i];
+      }
+    });
+  }
+});
+
+sizeXL.addEventListener("change", function (e) {
+  if (this.checked) {
+    console.log(this.id);
+    filterArray.size.push(this.id.toUpperCase());
+  } else {
+    let id = this.id.toUpperCase();
+    filterArray.size = filterArray.size.filter((v, i) => {
+      if (filterArray.size[i] !== id) {
+        return filterArray.size[i];
+      }
+    });
+  }
+});

@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+.header-div{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header-div .kebab{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.header .header-div .kebab button{
+  background-color: #000;
+  border: none;
+}
+#kebeb-bar{
+  margin-right: 10px;
+  width: 30px;
+  font-size: 20px;
+}
+
+/* Kebab Menu */
+.header #menu{
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  background-color: #00000068;
+  border-radius: 10px;
+  padding: 10px 15px;
+  animation-name: visible;
+  animation-duration: 0.3s;
+}
+.header #menu div{
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #fff;
+  height: fit-content;
+  width: 70px;
+  text-align: center;
+}
+.header #menu div a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #000;
+}
+@keyframes visible {
+  0%{
+      opacity: 0.3;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+/* Kebab close */
+
+.header-div .left{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.header-div .right{
+    padding: 10px;
+}
+.header-div .right ul{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.header-div .right ul li a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: #ffffffd1;
+    padding: 20px;
+}
+.header-div .right ul li a:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+.header-div .right ul #count-badge{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+  padding: 3px 5px ;
+  border-radius: 50%;
+  right: 18%;
+  top: -10px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 2px;
+  margin: 1rem auto;
+}
+
+datalist {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+
+  background-color: black;
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+nav .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav .nav-items a {
+  margin: 0 1rem;
+}
+
+main {
+    margin-top: 4rem;
+    display: flex;
+    height: 100vh;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+main aside {
+  overflow: scroll;
+  flex: 0.2;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  width: 11rem;
+}
+main main-content {
+  display: block;
+  width: 100%;
+  margin-left: 11rem;
+}
+aside section {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.573);
+}
+aside section ul li input:hover{
+    cursor: pointer;
+}
+aside section:last-child {
+  border-bottom: none;
+}
+
+aside section title {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+aside section li {
+  margin-bottom: 0.75rem;
+}
+
+aside section label {
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
+main aside .apply-btn{
+    padding: 10px 0px;
+    width: 90%;
+    margin: 0px auto;
+}
+main aside button{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+main aside button:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+main aside button:active{
+    transform:scale(0.95);
+}
+main-content {
+  padding: 1rem;
+  position: relative;
+}
+main-content .filters{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    gap: 40px;
+}
+main-content .filters #all-btn{
+  background-color: #000;
+  color: #fff;
+}
+main-content .filters button{
+    width: 80%;
+    font-size: 18px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+main-content .filters button:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+main-content .filters button:active{
+    transform: scale(0.95);
+}
+main-content .input input {
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+}
+main-content .active {
+  background-color: black;
+  color: white;
+}
+/* Item manual */
+#item-wise{
+  animation-name: display;
+  animation-duration: 700ms;
+}
+@keyframes display {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+.items-container{
+  padding: 10px 8px;
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+  overflow: scroll;
+  border-radius: 5px;
+  box-shadow: 1px 2px 16px 1px rgba(82,85,87,0.61);
+}
+.items-container .item{
+  border: 2px solid rgba(0, 0, 0, 0.71);
+  border-radius: 5px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 21%;
+  max-width: 20%;
+}
+.items-container .item .image{
+  padding: 5px;
+  margin-left: 10px;
+  height: 230px;
+}
+.items-container .item .image img{
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+}
+.items-container .item .details{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.items-container .item .details .title{
+  height: 40px;
+  width: 90%;
+  font-weight: 700;
+  overflow :hidden;
+}
+.items-container .item .details .color #color1{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: transparent;
+  z-index: 1;
+}
+.items-container .item .details .color #color2{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: blue;
+  color: transparent;
+  z-index: 1;
+}
+.items-container .item .details .color #color3{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: yellow;
+  color: transparent;
+  z-index: 1;
+}
+.items-container .item .details .price-size{
+  display: flex;
+  justify-content: space-between;
+}
+.items-container .item .add-cart button{
+  width: 100%;
+  height: 35px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.items-container .item .add-cart button:hover{
+  background-color: #000000be;
+  cursor:pointer;
+}
+.items-container .item .add-cart button:active{
+  transform: scale(.95);
+  border-radius: 5px;
+}
+#h2-heading{
+  width: fit-content;
+  padding-bottom: 10px;
+}
+
+
+/* Responsie Design */
+
+@media only  screen and (max-width: 768px) and (min-width: 320px){
+  .header-div{
+      padding: 0px;
+  }
+  .header-div .right{
+      display: none;
+  }
+  .header .header-div .kebab{
+      display: flex;
+      column-gap: 30px;
+  }
+
+  /* filters */
+
+  main aside{
+    display: none;;
+  }
+  main-content{
+    padding: 10px 20px;
+  }
+  main main-content{
+    margin: 0px;
+  }
+  main-content .input input{
+    width: 100%;
+    height: 25px;
+    font-size: 14px;
+    border: 1px solid black;
+    outline: none;
+  }
+  main-content .filters{
+    flex-flow: row wrap;
+    gap: 10px;
+  }
+  main-content .filters button{
+    font-size: 12px;
+    width: 30%;
+    height: 25px;
+  }
+  .items-container{
+    min-height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .items-container .item{
+    min-width: 121px;
+  }
+  .items-container .item .image{
+    height: 100px;
+    width: 80%;
+  }
+  .items-container .item .details{
+    font-size: 10px;
+    gap: 2px;
+  }
+  .items-container .item .details .title{
+    font-size: 12px;
+    width: 100%;
+    height: 33px;
+  }
+  .items-container .item .add-cart button{
+    height: 20px;
+    font-size: 12px;
+  }
+}

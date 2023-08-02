@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+}
+.header .header-div .kebab{
+    display: none;
+}
+.header .header-div .kebab button{
+    background-color: #000;
+    border: none;
+}
+#kebeb-bar{
+    margin-right: 10px;
+    width: 30px;
+    font-size: 20px;
+}
+/* Kebab Menu */
+.header #menu{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    background-color: #00000068;
+    border-radius: 10px;
+    padding: 10px 15px;
+    animation-name: visible;
+    animation-duration: 0.3s;
+}
+.header #menu div{
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #fff;
+    height: fit-content;
+    width: 70px;
+    text-align: center;
+}
+.header #menu div a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #000;
+}
+@keyframes visible {
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Kebab close */
+
+
+.header-div{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-div .left{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.header-div .right{
+    padding: 10px;
+}
+.header-div .right ul{
+    display: flex;
+    justify-content: space-around;
+}
+.header-div .right ul li a{
+    text-decoration: none;
+    color: #ffffffd1;
+    padding: 20px;
+}
+.header-div .right ul li a:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+#signup-inputs{
+    max-width: 90%;
+    margin: 0px auto;
+    margin-top: 4rem;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 25px;
+}
+#signup-inputs input{
+    font-weight: 600;
+    padding: 3px 10px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+}
+#signup-inputs input:focus{
+    outline: 1px solid rgba(0, 0, 0, 0.639);;
+}
+#signup-inputs #signup-button{
+    width: 130px;
+    height: 33px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+    transition: 0.3s;
+    font-size: 15px;
+}
+#signup-inputs #signup-button:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#signup-inputs #signup-button:focus{
+    background-color: #000;
+    color: #fff;
+}
+#signup-inputs #signup-button:active{
+    transform: scale(0.95);
+}
+#login-button{
+    margin-left: 5%;
+    width: 200px;
+    height: 33px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+    transition: 0.3s;
+    font-size: 15px;
+}
+#login-button:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#login-button:active:focus{
+    background-color: #000;
+    color: #fff;
+}
+#login-button:active{
+    transform: scale(0.95);
+}
+
+/* Responsie Design */
+
+@media only  screen and (max-width: 768px) and (min-width: 320px){
+    .header-div{
+        padding: 0px;
+    }
+    .header-div .right{
+        display: none;
+    }
+    .header .header-div .kebab{
+        display: block;
+    }
+
+    /* form inputs */
+
+    #signup-inputs input{
+        width: 94%;
+        height: 20px;
+    }
+    #signup-inputs{
+        margin-top: 10%;
+    }
+    #signup-inputs #signup-button{
+        width: 100px;
+        height: 25px;
+    }
+    #login-button{
+        margin-left: 20px;
+        width: 200px;
+        height: 28px;
+    }
+}

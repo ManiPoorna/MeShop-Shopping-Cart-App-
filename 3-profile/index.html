@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeShop. Profile</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="profile-style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-div">
+            <div class="left">MeShop.</div>
+            <div class="kebab">
+                <button id="kebeb-bar"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <div><a href="#">Home</a></div>
+            <div><a href="../2-login/index.html">Login</a></div>
+            <div><a href="../1-signup/index.html">SignUp</a></div>
+            <div><a href="../5-cart/index.html">My Cart</a></div>
+            <div><a href="../3-profile/index.html">Profile</a></div>
+            <div><a href="../4-shop/index.html">Shopping</a></div>
+        </div>
+
+    </header>
+
+    <form id="profile-inputs">
+        <h1>Profile</h1>
+        <div class="fname">
+            <input id="fname" type="text" placeholder="First Name">
+        </div>
+        <div class="lname">
+            <input id="lname" type="text" placeholder="Last Name">
+        </div>
+        <button id="saveinfo-button">Save info</button>
+        
+        <h1>Edit Password</h1>
+
+        <div class="oldPass">
+            <input id="old-password" type="password" placeholder="Old Password">
+        </div>
+        <div class="pass">
+            <input is="new-password" type="password" placeholder="New Password">
+        </div>
+        <div class="confirm-pass">
+            <input id="confirm-password" type="password" placeholder="Confirm Password">
+        </div>
+
+        <button id="changepassword-btn">Change Password</button>
+        
+        <button id="logout-btn">Logout</button>
+    </form>
+
+    <script src="./profile-script.js">console.clear();</script>
+</body>
+</html>

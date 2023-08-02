@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeShop. Best Shopping Apllication.</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./shop-style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-div">
+      <div class="left">MeShop.</div>
+      <div class="right">
+        <ul type="none">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">SignUp</a></li>
+          <li><a href="../5-cart/index.html">My Cart</a></li>
+          <div id="count-badge"></div>
+          <li><a href="../3-profile/index.html">Profile</a></li>
+        </ul>
+      </div>
+      <div class="kebab">
+        <a href="../5-cart/index.html" style="font-size: 13px;">My Cart</a>
+        <button id="kebeb-bar"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+      </div>
+    </div>
+    <div class="menu" id="menu">
+      <div><a href="../index.html">Home</a></div>
+      <div><a href="../2-login/index.html">Login</a></div>
+      <div><a href="../1-signup/index.html">SignUp</a></div>
+      <div><a href="../5-cart/index.html">My Cart</a></div>
+      <div><a href="../3-profile/index.html">Profile</a></div>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <h2 style="text-align: center;">Filters</h2>
+      <section>
+        <title>Colors</title>
+        <ul>
+        <li>
+            <input id="#ff0000" type="checkbox" name="color" />
+            <label for="red">Red</label>
+        </li>
+        <li>
+            <input id="#6495ED" type="checkbox" name="color" />
+            <label for="blue">Blue</label>
+        </li>
+        <li>
+            <input id="#98fb98" type="checkbox" name="color" />
+            <label for="green">Green</label>
+        </li>
+        <li>
+            <input id="#000000" type="checkbox" name="color" />
+            <label for="black">Black</label>
+        </li>
+        <li>
+            <input id="#ed7b09" type="checkbox" name="color" />
+            <label for="white">Orange</label>
+        </li>
+        </ul>
+      </section>
+      <section>
+        <title>Sizes</title>
+          <ul>
+            <li>
+              <input id="s" type="checkbox" name="color" />
+              <label for="s">S</label>
+            </li>
+            <li>
+              <input id="m" type="checkbox" name="color" />
+              <label for="m">M</label>
+            </li>
+            <li>
+              <input id="l" type="checkbox" name="color" />
+              <label for="l">L</label>
+            </li>
+            <li>
+              <input id="xl" type="checkbox" name="color" />
+              <label for="xl">XL</label>
+            </li>
+          </ul>
+      </section>
+      <section>
+        <title>Rating</title>
+        <input type="range" id="range" min="0" max="5" value="0" list="values" />
+        <datalist id="values">
+          <option value="0" label="0">1</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" label="5">5</option>
+        </datalist>
+      </section>
+      <section>
+        <title>Price Range</title>
+          <ul>
+            <li>
+              <input id="0-25" type="checkbox" value="25" name="prange" />
+              <label for="0-25">$0 to $25</label>
+            </li>
+            <li>
+              <input id="25-50" type="checkbox" value="50" name="prange" />
+              <label for="25-50">$25 to $50</label>
+            </li>
+            <li>
+              <input id="50-100" type="checkbox" value="100" name="prange" />
+              <label for="50-100">$50 to $100</label>
+            </li>
+            <li>
+              <input id="100on" type="checkbox" value="1000000" name="prange" />
+              <label for="100on">$100 onwards</label>
+            </li>
+          </ul>
+      </section>
+      <div class="apply-btn">
+        <button id="apply-filter">Apply Filter</button>
+      </div>
+    </aside>
+    <main-content>
+      <div class="input">
+        <input type="search" id="search-bar" placeholder="Search" />
+      </div>
+      <div class="filters">
+        <button id="all-btn">All</button>
+        <button id="men-btn">Mens</button>
+        <button id="women-btn">Womens</button>
+        <button id="jewellery-btn">Jewelery</button>
+        <button id="electronics-btn">Electronics</button>
+      </div>
+
+      <!-- ITEMS-WISE CONTAINERs -->
+
+      <div class="item-wise" id="item-wise">
+          <!-- MEN's CONTANIER -->
+          <h2 id="h2-mens" style="padding-bottom: 20px;">Men's Clothing</h2>
+          <div class="items-container" id="mens-container">
+            <!-- <div class="item" id="1">    
+                <div class="image">
+                  <img src="" alt="item">
+                </div><hr>
+                <div class="details">
+                  <div class="title">"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"</div>
+                  <div class="price-size">
+                    <div class="price" id="price">$100</div>
+                    <div class="size">X,XL,M,S</div>
+                  </div>
+                  <div class="color">
+                    Colors : <span id="color1" >ss</span> <span id="color2">cc</span> <span id="color3">cc</span>
+                  </div>
+                  <div class="rating">
+                    Rating : 3.5 / 5
+                  </div>
+                </div>
+                <div class="add-cart">
+                  <button id="addTo-cart" onclick="getId(this)">Add to Cart</button>
+                </div>
+              </div> -->
+          </div>
+    
+          <!-- WOMEN's CONTANIER -->
+          <h2 id="h2-womens" style="padding: 20px 0px;">Womens' Clothing</h2>
+          <div class="items-container" id="womens-container"></div>
+    
+          <!-- JEWELERY CONTANIER -->
+          <h2 id="h2-jewelery" style="padding: 20px 0px;">Jewelery</h2>
+          <div class="items-container" id="jewelery-container"></div>
+    
+          <!-- ELECTRONICS CONTANIER -->
+          <h2 id="h2-electronics" style="padding: 20px 0px;">Electronics</h2>
+          <div class="items-container" id="electronics-container"></div>
+      </div>
+      
+      <div class="searched-container" id="searched-container" style="height: 75%;width: 99%;display: none;">
+
+        <h2 id="search-text" style="padding: 20px 0px;"></h2>
+        <div class="items-container" id="search-render">
+           <div class="item" id="1">    
+                <div class="image">
+                  <img src="" alt="item">
+                </div><hr>
+                <div class="details">
+                  <div class="title">"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"</div>
+                  <div class="price-size">
+                    <div class="price" id="price">$100</div>
+                    <div class="size">X,XL,M,S</div>
+                  </div>
+                  <div class="color">
+                    Colors : <span id="color1" >ss</span> <span id="color2">cc</span> <span id="color3">cc</span>
+                  </div>
+                  <div class="rating">
+                    Rating : 3.5 / 5
+                  </div>
+                </div>
+                <div class="add-cart">
+                  <button id="addTo-cart" onclick="getId(this)">Add to Cart</button>
+                </div>
+              </div>
+        </div>
+      </div>
+
+    </main-content>
+  </main>
+
+  <script src="./shop-script.js">console.clear();</script>
+</body>
+
+</html>

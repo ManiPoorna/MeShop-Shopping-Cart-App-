@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+}
+.header-div{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Kebab Menu */
+.header .header-div .kebab{
+    display: none;
+}
+.header .header-div .kebab button{
+    background-color: #000;
+    border: none;
+}
+#kebeb-bar{
+    margin-right: 10px;
+    width: 30px;
+    font-size: 20px;
+}
+.header #menu{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    background-color: #00000068;
+    border-radius: 10px;
+    padding: 10px 15px;
+    animation-name: visible;
+    animation-duration: 0.3s;
+}
+.header #menu div{
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #fff;
+    height: fit-content;
+    width: 70px;
+    text-align: center;
+}
+.header #menu div a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #000;
+}
+@keyframes visible {
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Kebab close */
+
+.header-div .left{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.header-div .right{
+    padding: 10px;
+}
+.header-div .right ul{
+    display: flex;
+    justify-content: space-around;
+}
+.header-div .right ul li a{
+    text-decoration: none;
+    color: #ffffffd1;
+    padding: 20px;
+}
+#profile-inputs{
+    max-width: 90%;
+    margin: 0px auto;
+    margin-top: 3.7rem;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 25px;
+}
+#profile-inputs input{
+    font-weight: 600;
+    padding: 3px 10px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+}
+#profile-inputs input:focus{
+    outline: 1px solid rgba(0, 0, 0, 0.639);;
+}
+#profile-inputs h1{
+    text-align: center;
+}
+#profile-inputs button{
+    width: 16%;
+    height: 33px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+    transition: 0.3s;
+    font-size: 15px;
+}
+#profile-inputs #saveinfo-button:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#profile-inputs #saveinfo-button:active{
+    transform: scale(0.95);
+
+}#profile-inputs #changepassword-btn:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#profile-inputs #changepassword-btn:active{
+    transform: scale(0.95);
+
+}#profile-inputs #logout-btn:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#profile-inputs #logout-btn:active{
+    transform: scale(0.95);
+}
+
+
+/* Responsie Design */
+
+@media only  screen and (max-width: 768px) and (min-width: 320px){
+    .header-div{
+        padding: 0px;
+    }
+    .header-div .right{
+        display: none;
+    }
+    .header .header-div .kebab{
+        display: block;
+    }
+    .header .header-div .kebab{
+        display: flex;
+    }
+
+    /* inputs */
+
+    #profile-inputs input{
+        width: 93%;
+        height: 25px;
+    }
+    #profile-inputs h1{
+        font-size: 25px;
+    }
+    #profile-inputs button{
+        width: 30%;
+        height: 30px;
+    }
+    #profile-inputs #changepassword-btn{
+        width: 50%;
+        height: 30px;
+    }
+}
