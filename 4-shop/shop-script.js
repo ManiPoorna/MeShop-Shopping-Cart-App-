@@ -135,10 +135,9 @@ function seperateByElectronics(itemsData){
     return electronicsArray;
 }
 
-
-allBtn.addEventListener('click',(event)=>{
-    allBtn.style.backgroundColor = "black";
-    allBtn.style.color = "white";
+function changeBackGroundOfButtons() {
+    allBtn.style.backgroundColor = "white";
+    allBtn.style.color = "black";
     menBtn.style.backgroundColor = "white";
     menBtn.style.color = "black";
     womenBtn.style.backgroundColor = "white";
@@ -147,6 +146,20 @@ allBtn.addEventListener('click',(event)=>{
     jeweleryBtn.style.color = "black";
     electronicsBtn.style.backgroundColor = "white";
     electronicsBtn.style.color = "black";
+}
+
+function containerDisplay() {
+  mensContianer.style.display = "none";
+  womensContianer.style.display = "none";
+  jeweleryContianer.style.display = "none";
+  electronicsContianer.style.display = "none";
+}
+
+allBtn.addEventListener('click',(event)=>{
+    changeBackGroundOfButtons();  
+    allBtn.style.backgroundColor = "black";
+    allBtn.style.color = "white";
+    
 
     // Visible & Hidden containers
     mensContianer.style.display = "flex";
@@ -162,22 +175,13 @@ allBtn.addEventListener('click',(event)=>{
 })
 
 menBtn.addEventListener('click',(event)=>{
-    allBtn.style.backgroundColor = "white";
-    allBtn.style.color = "black";
+    changeBackGroundOfButtons();
     menBtn.style.backgroundColor = "black";
     menBtn.style.color = "white";
-    womenBtn.style.backgroundColor = "white";
-    womenBtn.style.color = "black";
-    jeweleryBtn.style.backgroundColor = "white";
-    jeweleryBtn.style.color = "black";
-    electronicsBtn.style.backgroundColor = "white";
-    electronicsBtn.style.color = "black";
 
     // Visible & Hidden containers
+    containerDisplay();
     mensContianer.style.display = "flex";
-    womensContianer.style.display = "none";
-    jeweleryContianer.style.display = "none";
-    electronicsContianer.style.display = "none";
 
     // Headings DOM
     h2Mens.style.display = "block";
@@ -187,22 +191,13 @@ menBtn.addEventListener('click',(event)=>{
 })
 
 womenBtn.addEventListener('click',(event)=>{
-    allBtn.style.backgroundColor = "white";
-    allBtn.style.color = "black";
-    menBtn.style.backgroundColor = "white";
-    menBtn.style.color = "black";
+    changeBackGroundOfButtons()
     womenBtn.style.backgroundColor = "black";
     womenBtn.style.color = "white";
-    jeweleryBtn.style.backgroundColor = "white";
-    jeweleryBtn.style.color = "black";
-    electronicsBtn.style.backgroundColor = "white";
-    electronicsBtn.style.color = "black";
 
     // Visible & Hidden containers
-    mensContianer.style.display = "none";
+    containerDisplay()
     womensContianer.style.display = "flex";
-    jeweleryContianer.style.display = "none";
-    electronicsContianer.style.display = "none";
 
     // Headings DOM
     h2Mens.style.display = "none";
@@ -212,22 +207,13 @@ womenBtn.addEventListener('click',(event)=>{
 })
 
 jeweleryBtn.addEventListener('click',(event)=>{
-    allBtn.style.backgroundColor = "white";
-    allBtn.style.color = "black";
-    menBtn.style.backgroundColor = "white";
-    menBtn.style.color = "black";
-    womenBtn.style.backgroundColor = "white";
-    womenBtn.style.color = "black";
+    changeBackGroundOfButtons()
     jeweleryBtn.style.backgroundColor = "black";
     jeweleryBtn.style.color = "white";
-    electronicsBtn.style.backgroundColor = "white";
-    electronicsBtn.style.color = "black";
 
     // Visible & Hidden containers
-    mensContianer.style.display = "none";
-    womensContianer.style.display = "none";
+    containerDisplay();
     jeweleryContianer.style.display = "flex";
-    electronicsContianer.style.display = "none";
 
     // Headings DOM
     h2Mens.style.display = "none";
@@ -237,21 +223,12 @@ jeweleryBtn.addEventListener('click',(event)=>{
 })
 
 electronicsBtn.addEventListener('click',(event)=>{
-    allBtn.style.backgroundColor = "white";
-    allBtn.style.color = "black";
-    menBtn.style.backgroundColor = "white";
-    menBtn.style.color = "black";
-    womenBtn.style.backgroundColor = "white";
-    womenBtn.style.color = "black";
-    jeweleryBtn.style.backgroundColor = "white";
-    jeweleryBtn.style.color = "black";
+    changeBackGroundOfButtons();
     electronicsBtn.style.backgroundColor = "black";
     electronicsBtn.style.color = "white";
 
     // Visible & Hidden containers
-    mensContianer.style.display = "none";
-    womensContianer.style.display = "none";
-    jeweleryContianer.style.display = "none";
+    containerDisplay();
     electronicsContianer.style.display = "flex";
 
     // Headings DOM
