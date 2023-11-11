@@ -108,15 +108,13 @@ function renderPrice(data){
 function deleteId(element){
   let itemId = element.parentElement.parentElement.id;
   // console.log(itemId.id);
-  let confirm = prompt(`Want to Remove this item from Cart?`);
-  if(confirm){
+  if(confirm("Want to remove Item from cart?")){
     addedToCart.forEach((v,i)=>{
       if(addedToCart[i].id == itemId){
         // console.log(i);
         let title = addedToCart[i].title;
         addedToCart.splice(i,1);
         localStorage.setItem("cartItems",JSON.stringify(addedToCart));
-        alert(`${title} will be removed from Cart`);
       }
     })
     addedToCart = JSON.parse(localStorage.getItem('cartItems'));
@@ -134,7 +132,6 @@ function getAmount(){
   amountPayable = amountPayable * 100;
 }
 document.getElementById("check-payment").onclick = function (e) {
-  alert("OTP : '1234'");
   var options = {
     key: "rzp_test_xV39ZNbgU1Du4V", // Enter the Key ID generated from the Dashboard
     amount: amountPayable ,//check this out if this is paisa or INR // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
